@@ -21,12 +21,12 @@ const challenges = {
             "Haz una armadura completa de hierro.",
             "Encuentra un templo del desierto.",
             "Haz un portal al Nether sin morir.",
-            "Domestica un gato callejero.",
+            "Domestica un gato.",
             "Encuentra 10 perlas de Ender."
         ],
         moderado: [
             "Mata un Ghast con su propia bola de fuego.",
-            "Haz una granja de experiencia nivel 30.",
+            "Haz una granja de experiencia.",
             "Encuentra una fortaleza del Nether.",
             "Haz un beacon.",
             "Mata un Wither.",
@@ -34,7 +34,7 @@ const challenges = {
             "Encuentra una ciudad del End.",
             "Haz una casa con 5 habitaciones decoradas.",
             "Consigue 10 bloques de obsidiana sin picareta de diamante.",
-            "Haz un mapa gigante de tu mundo."
+            "Haz un mapa gigante de tu mundo (5x5)."
         ],
         medio: [
             "Mata al Dragón del End sin armadura.",
@@ -254,48 +254,49 @@ const challenges = {
             "Haz 200 notas perfectas en una canción.",
             "Completa una canción con más del 90% de precisión.",
             "Haz 50 notas perfectas consecutivas en Hard.",
-            "Completa una canción en Expert.",
+            "Completa una canción en Erect.",
             "Haz 300 notas en total en una canción.",
-            "Completa una canción en Expert sin fallar más de 10 veces.",
+            "Completa una canción en Erect sin fallar más de 10 veces.",
             "Haz 100 notas perfectas consecutivas.",
             "Completa una canción en Hard con más del 95% de precisión.",
             "Haz 250 notas perfectas en una canción."
         ],
         medio: [
-            "Completa una canción en Expert sin fallar más de 5 veces.",
+            "Completa una canción en Erect sin fallar más de 5 veces.",
             "Haz 300 notas perfectas en una canción.",
             "Completa una canción con más del 95% de precisión.",
-            "Haz 100 notas perfectas consecutivas en Expert.",
-            "Completa una canción en Expert+.",
+            "Haz 100 notas perfectas consecutivas en Erect.",
+            "Completa una canción en Nightmare.",
             "Haz 400 notas en total en una canción.",
-            "Completa una canción en Expert+ sin fallar más de 10 veces.",
+            "Completa una canción en Nightmare sin fallar más de 10 veces.",
             "Haz 150 notas perfectas consecutivas.",
-            "Completa una canción en Expert con 100% de precisión.",
+            "Completa una canción en Erect con 100% de precisión.",
             "Haz 350 notas perfectas en una canción."
         ],
         dificil: [
-            "Completa una canción en Expert+ sin fallar más de 5 veces.",
+            "Completa una canción en Nightmare sin fallar más de 5 veces.",
             "Haz 400 notas perfectas en una canción.",
-            "Completa una canción en Expert+ con más del 95% de precisión.",
-            "Haz 200 notas perfectas consecutivas en Expert+.",
-            "Completa una canción en Expert+ con 100% de precisión.",
+            "Completa una canción en Nightmare con más del 95% de precisión.",
+            "Haz 200 notas perfectas consecutivas en Nightmare.",
+            "Completa una canción en Nightmare con 100% de precisión.",
             "Haz 500 notas en total en una canción.",
-            "Completa una canción en Expert+ sin fallar ni una vez.",
+            "Completa una canción en Nightmare sin fallar ni una vez.",
             "Haz 250 notas perfectas consecutivas.",
-            "Completa una canción de más de 5 minutos en Expert+ sin fallar.",
+            "Completa una canción de más de 5 minutos en Nightmare sin fallar.",
             "Haz 450 notas perfectas en una canción."
         ],
         imposible: [
-            "Completa una canción en Expert+ con 100% de precisión y sin fallar ni una vez.",
+            "Completa una canción en Nightmare con 100% de precisión y sin fallar ni una vez.",
             "Haz 500 notas perfectas en una canción.",
-            "Completa una canción de más de 7 minutos en Expert+ sin fallar.",
-            "Haz 300 notas perfectas consecutivas en Expert+.",
-            "Completa una canción en Expert+ con 100% de precisión usando solo una mano.",
+            "Completa una canción de más de 7 minutos sin fallar.",
+            "Haz 300 notas perfectas consecutivas en Nightmare.",
+            "Completa la cancion Spookeez en Perfect Gold.",
+            "Completa una canción en Nightmare con 100% de precisión usando solo una mano.",
             "Haz 600 notas en total en una canción.",
-            "Completa una canción en Expert+ con los ojos cerrados (sin ver la pantalla).",
+            "Completa una canción en Nightmare con los ojos cerrados (sin ver la pantalla).",
             "Haz 350 notas perfectas consecutivas.",
-            "Completa una canción de más de 10 minutos en Expert+ sin fallar.",
-            "Haz 500 notas perfectas en una canción en Expert+."
+            "Completa una canción de más de 10 minutos fallar.",
+            "Haz 500 notas perfectas en una canción en Nightmare."
         ]
     },
     overwatch: {
@@ -1241,7 +1242,7 @@ const challenges = {
             "Recoge 100 monedas.",
             "Usa tu parry 200 veces.",
             "Haz 20 super arts.",
-            "Completa 15 jefes en Expert.",
+            "Completa 15 jefes en Erect.",
             "Sobrevive 5 minutos en un nivel.",
             "Recoge 15 corazones extra.",
             "Usa todas las armas del juego.",
@@ -1253,11 +1254,11 @@ const challenges = {
             "Recoge todas las monedas del juego.",
             "Usa tu parry 500 veces.",
             "Haz 50 super arts en una sola partida.",
-            "Completa todos los jefes en Expert sin recibir daño.",
+            "Completa todos los jefes en Erect sin recibir daño.",
             "Sobrevive 10 minutos en un nivel sin morir.",
             "Recoge todos los corazones extra del juego.",
             "Usa todas las armas en una sola partida.",
-            "Completa todo el juego en Expert sin morir ni una vez."
+            "Completa todo el juego en Erect sin morir ni una vez."
         ]
     },
     notmyneighbor: {
