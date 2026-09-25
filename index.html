@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retos Al Azar</title>
+    <link rel="stylesheet" href="style.css">
+    <base target="_blank">
+</head>
+
+<body>
+    <div id="retos-app">
+        <div class="header">
+            <h1>Retos Al Azar</h1>
+            <p>Selecciona juegos, dificultad y jugadores, luego genera tu desafío</p>
+        </div>
+
+        <div class="count-badge" id="count-badge">Selecciona al menos un juego y una dificultad</div>
+
+        <div class="main-grid">
+            <!-- Columna izquierda -->
+            <div class="left-col">
+                <!-- Jugadores -->
+                <div class="section">
+                    <h2 class="section-title">👥 Jugadores</h2>
+                    <div class="player-input-row">
+                        <input type="text" id="player-input" placeholder="Nombre..." maxlength="20">
+                        <button id="add-player-btn">+</button>
+                    </div>
+                    <div class="players-list" id="players-list"></div>
+                    <div class="assign-mode">
+                        <span class="mode-label">Asignación:</span>
+                        <div class="toggle-group">
+                            <button class="mode-btn active" data-mode="random">🎲 Al azar</button>
+                            <button class="mode-btn" data-mode="all">👥 Todos</button>
+                        </div>
+                        <p class="mode-desc" id="mode-desc">El reto se asignará a un jugador elegido al azar.</p>
+                    </div>
+                </div>
+
+                <!-- Juegos -->
+                <div class="section">
+                    <h2 class="section-title">🎮 Juegos</h2>
+                    <div class="controls">
+                        <button class="game-btn" data-game="minecraft">Minecraft</button>
+                        <button class="game-btn" data-game="fortnite">Fortnite</button>
+                        <button class="game-btn" data-game="brawlstars">Brawl Stars</button>
+                        <button class="game-btn" data-game="fnf">FNF</button>
+                        <button class="game-btn" data-game="overwatch">Overwatch</button>
+                        <button class="game-btn" data-game="clashroyale">Clash Royale</button>
+                        <button class="game-btn" data-game="rocketleague">Rocket League</button>
+                        <button class="game-btn" data-game="cyberpunk">Cyberpunk</button>
+                        <button class="game-btn" data-game="roblox">Roblox</button>
+                        <button class="game-btn" data-game="amongus">Among Us</button>
+                        <button class="game-btn" data-game="musedash">Muse Dash</button>
+                        <button class="game-btn" data-game="geometrydash">Geo Dash</button>
+                        <button class="game-btn" data-game="castlecrashers">Castle Crashers</button>
+                        <button class="game-btn" data-game="gtav">GTA V</button>
+                        <button class="game-btn" data-game="hollowknight">Hollow Knight</button>
+                        <button class="game-btn" data-game="silksong">Silksong</button>
+                        <button class="game-btn" data-game="cuphead">Cuphead</button>
+                        <button class="game-btn" data-game="notmyneighbor">Not My Neighbor</button>
+                    </div>
+                </div>
+
+                <!-- Dificultad -->
+                <div class="section">
+                    <h2 class="section-title">⚡ Dificultad</h2>
+                    <div class="difficulty-bar">
+                        <button class="diff-btn regalado" data-diff="regalado">Regalado</button>
+                        <button class="diff-btn facil" data-diff="facil">Fácil</button>
+                        <button class="diff-btn moderado" data-diff="moderado">Moderado</button>
+                        <button class="diff-btn medio" data-diff="medio">Medio</button>
+                        <button class="diff-btn dificil" data-diff="dificil">Difícil</button>
+                        <button class="diff-btn imposible" data-diff="imposible">Imposible</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="right-col">
+                <!-- Cronómetro -->
+                <div class="section timer-section">
+                    <h2 class="section-title">⏱️ Cronómetro</h2>
+                    <div class="timer-display" id="timer-display">00:00.000</div>
+                    <div class="timer-mode-toggle">
+                        <button class="timer-mode-btn active" data-timer-mode="stopwatch">⏱️ Cronómetro</button>
+                        <button class="timer-mode-btn" data-timer-mode="countdown">⏳ Cuenta regresiva</button>
+                    </div>
+                    <div class="timer-presets" id="timer-presets" style="display:none;">
+                        <button class="preset-btn" data-seconds="60">1m</button>
+                        <button class="preset-btn" data-seconds="180">3m</button>
+                        <button class="preset-btn" data-seconds="300">5m</button>
+                        <button class="preset-btn" data-seconds="600">10m</button>
+                        <button class="preset-btn" data-seconds="1800">30m</button>
+                        <button class="preset-btn" data-seconds="3600">1h</button>
+                    </div>
+                    <div class="timer-custom" id="timer-custom-input" style="display:none;">
+                        <input type="number" id="custom-min" placeholder="Min" min="0" max="999">
+                        <input type="number" id="custom-sec" placeholder="Seg" min="0" max="59">
+                        <button class="preset-btn" id="custom-set">Set</button>
+                    </div>
+                    <div class="timer-controls">
+                        <button class="timer-btn start" id="timer-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                class="main-grid-item-icon" fill="none" stroke="lime" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                        </button>
+                        <button class="timer-btn pause" id="timer-pause" disabled>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                class="main-grid-item-icon" fill="none" stroke="yellow" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <rect height="16" width="4" x="6" y="4" />
+                                <rect height="16" width="4" x="14" y="4" />
+                            </svg></button>
+                        <button class="timer-btn reset" id="timer-reset">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                class="main-grid-item-icon" fill="none" stroke="#8B0000" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="23 4 23 10 17 10" />
+                                <polyline points="1 20 1 14 7 14" />
+                                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="generate-btn" id="generate-btn">⚡ Generar Retos</button>
+
+                <!-- Resultado -->
+                <div id="challenges-container">
+                    <div class="empty-state">Tus retos aparecerán aquí</div>
+                </div>
+
+                <!-- Historial -->
+                <div class="section history-section" id="history-section" style="display:none;">
+                    <h2 class="section-title">📜 Historial</h2>
+                    <div class="history-list" id="history-list"></div>
+                    <button class="clear-history-btn" id="clear-history-btn">🗑️ Limpiar historial</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
